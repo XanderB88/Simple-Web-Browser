@@ -25,11 +25,14 @@
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0N-Jw-idH">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0N-Jw-idH">
                                 <rect key="frame" x="20" y="50" width="23.5" height="22"/>
                                 <state key="normal">
                                     <imageReference key="image" image="chevron.left.square.fill" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="backPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Arw-b9-s2B"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZnS-eM-YgB">
                                 <rect key="frame" x="64.5" y="44" width="285" height="34"/>
@@ -40,12 +43,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxD-Sy-IRr">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxD-Sy-IRr">
                                 <rect key="frame" x="369" y="50" width="25" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal">
                                     <imageReference key="image" image="chevron.forward.square.fill" catalog="system" symbolScale="large"/>
                                 </state>
+                                <connections>
+                                    <action selector="forwardPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W3V-OF-D1P"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -69,6 +75,12 @@
                             <constraint firstItem="GxD-Sy-IRr" firstAttribute="leading" secondItem="ZnS-eM-YgB" secondAttribute="trailing" constant="19.5" id="xmD-n1-8nS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adressTextField" destination="ZnS-eM-YgB" id="gVh-Tf-oB8"/>
+                        <outlet property="backButton" destination="m0N-Jw-idH" id="MPq-Gy-PK7"/>
+                        <outlet property="forwardButton" destination="GxD-Sy-IRr" id="gPi-Sf-fzO"/>
+                        <outlet property="webView" destination="O4g-rO-T1s" id="h8U-Az-M18"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
